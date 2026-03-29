@@ -9,9 +9,17 @@ public class HelloApp {
             return;
         }
 
-        // Enhanced for loop (for-each)
+        String result = "";
+
+        // Enhanced for loop to build string
         for (String name : args) {
-            System.out.println("Hello, " + name + "!");
+            result += name + ", ";
         }
+
+        // Remove trailing ", "
+        result = result.substring(0, result.length() - 2);
+
+        // Final output
+        System.out.println("Hello, " + result + "!");
     }
 }
