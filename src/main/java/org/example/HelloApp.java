@@ -9,17 +9,10 @@ public class HelloApp {
             return;
         }
 
-        String result = "";
-
-        // Enhanced for loop to build string
-        for (String name : args) {
-            result += name + ", ";
-        }
-
-        // Remove trailing ", "
-        result = result.substring(0, result.length() - 2);
+        // Join names with delimiter ", "
+        String names = String.join(", ", args);
 
         // Final output
-        System.out.println("Hello, " + result + "!");
+        System.out.println("Hello, " + names + "!");
     }
 }
